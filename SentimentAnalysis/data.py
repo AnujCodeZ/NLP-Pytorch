@@ -31,8 +31,3 @@ def load_file(filepath, device, MAX_VOCAB_SIZE=25000):
                                      sort_within_batch=False, repeat=False, device=device)
     
     return TEXT, LABEL, train, valid, test, train_iter, valid_iter, test_iter
-
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-TEXT, LABEL, train, valid, test, train_iter, valid_iter, test_iter = load_file(filepath='Data/',
-                                                                               device=device)
-
